@@ -23,9 +23,9 @@
   <body>
     <!-- -------------navbar--------------- -->
     <nav class="navbar">
-      <div class="navbar__top">
+      <div class="container navbar__top">
         <div class="navbar__item">
-          <img class="navbar__logo" src="images/logo.svg" alt="logo" />
+          <img class="navbar__logo" src="images/logo.png" alt="logo" />
         </div>
         <div class="navbar__item">
           <div class="navbar__search">
@@ -55,19 +55,19 @@
     <section class="slider">
       <div class="slider__wrapper">
         <div class="slider__item">
+          <div class="slider__bg"></div>
           <img
             src="./images/boots/scarpa-womens-zg-trek-gtx-walking-boots.png"
             alt="white sneaker"
             class="slider__img"
           />
-          <div class="slider__bg"></div>
           <h2 class="slider__title">
             scarpa<br />
             zg trek gtx
           </h2>
           <span class="slider__price">99$</span>
           <a href="#buyButton">
-            <button class="slider__buy__button">buy now</button>
+            <button class="btn light slider__buy__button">buy now</button>
           </a>
         </div>
         <div class="slider__item">
@@ -83,7 +83,7 @@
           </h2>
           <span class="slider__price">99$</span>
           <a href="#buyButton">
-            <button class="slider__buy__button">buy now</button>
+            <button class="btn slider__buy__button">buy now</button>
           </a>
         </div>
         <div class="slider__item">
@@ -99,7 +99,7 @@
           </h2>
           <span class="slider__price">99$</span>
           <a href="#buyButton">
-            <button class="slider__buy__button">buy now</button>
+            <button class="btn slider__buy__button">buy now</button>
           </a>
         </div>
         <div class="slider__item">
@@ -115,7 +115,7 @@
           </h2>
           <span class="slider__price">99$</span>
           <a href="#buyButton">
-            <button class="slider__buy__button">buy now</button>
+            <button class="btn slider__buy__button">buy now</button>
           </a>
         </div>
         <div class="slider__item">
@@ -131,13 +131,13 @@
           </h2>
           <span class="slider__price">99$</span>
           <a href="#buyButton">
-            <button class="slider__buy__button">buy now</button>
+            <button class="btn slider__buy__button">buy now</button>
           </a>
         </div>
       </div>
     </section>
     <!-- ------------------------features-------------------------- -->
-    <!-- <section class="features">
+    <section class="container features">
       <div class="features__item">
         <img src="images/free-delivery.png" alt="" class="features__img" />
         <h4 class="features__title">shipping</h4>
@@ -166,8 +166,8 @@
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, ab.
         </p>
       </div>
-    </section> -->
-    <section class="product">
+    </section>
+    <section class="product container">
       <div class="product__img__container">
         <img
           class="product__img"
@@ -195,7 +195,8 @@
           <span class="product__size">45</span>
           <span class="product__size">46</span>
         </div>
-        <button id="buyButton" class="product__button">buy now</button>
+        <p class="product__message"></p>
+        <button id="buyButton" class="btn product__button">buy now</button>
       </div>
       <!-- -------------------cart---------------------- -->
       <div class="cart">
@@ -205,7 +206,11 @@
 
             <div class="cart__chosen__products__details">
               <div class="cart__chosen__products__img__container">
-                <img class="cart__chosen__products__img" src="images/boots/scarpa-womens-zg-trek-gtx-walking-boots.png" alt="" />
+                <img
+                  class="cart__chosen__products__img"
+                  src="images/boots/scarpa-womens-zg-trek-gtx-walking-boots.png"
+                  alt=""
+                />
               </div>
               <h6 class="cart__chosen__products__title">scarpa</h6>
               <span class="cart__chosen__products__size"></span>
@@ -221,7 +226,7 @@
             <div class="cart__divide__line"></div>
 
             <div class="cart__total__container">
-              <button class="cart__continue__btn">continue shopping</button>
+              <button class="btn cart__continue__btn">continue shopping</button>
               <h5 class="cart__total__title">total:</h5>
               <span class="cart__total"></span>
             </div>
@@ -231,34 +236,139 @@
               <h4 class="cart__payment__informations__title">your details</h4>
               <div class="cart__input__container"></div>
               <div class="cart__input__container">
-                <label for="">full name</label>
-                <input type="text" />
+                <label for="name">full name</label>
+                <input id="name" name="name" type="text" />
+                <span id="name__message"></span>
               </div>
               <div class="cart__input__container">
-                <label for="">street</label>
-                <input type="text" />
+                <label for="street">street</label>
+                <input id="street" name="street" type="text" />
+                <span id="street__message"></span>
               </div>
               <div class="cart__input__container">
-                <label for="">city</label>
-                <input type="text" />
+                <label for="city">city</label>
+                <input id="city" name="city" type="text" />
+                <span id="city__message"></span>
               </div>
               <div class="cart__input__container">
-                <label for="">phone nr</label>
-                <input type="text" />
+                <label for="phone">phone nr</label>
+                <input id="phone" name="phone" type="text" />
+                <span id="phone__message"></span>
               </div>
               <div class="cart__input__container">
-                <label for="">e-mail</label>
-                <input type="text" />
+                <label for="email">e-mail</label>
+                <input id="email" name="email" type="text" />
+                <span id="email__message"></span>
               </div>
             </form>
             <div class="cart__payment__options">
               <h4 class="cart__payment__options__title">payment options</h4>
               <div class="cart__payment__icons__container"></div>
-              <button class="cart__pay__btn">pay now</button>
+              <button class="btn cart__pay__btn">pay now</button>
             </div>
           </div>
         </div>
         <i id="cart__close__btn" class="fa-solid fa-xmark"></i>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__image__container">
+          <img
+            class="gallery__image__container__img"
+            src="images/gallery/gallery1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="gallery__image__container">
+          <img
+            class="gallery__image__container__img"
+            src="images/gallery/gallery2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="gallery__image__container">
+          <img
+            class="gallery__image__container__img"
+            src="images/gallery/gallery3.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="newsletter__wrapper">
+        <h2 class="newsletter__title">
+          Sign Up For Great Offers & <br />
+          <span class="newsletter__title__span"
+            >get yor exclusive voucher now</span
+          >
+        </h2>
+        <div class="newsletter__input__container">
+          <input class="newsletter__input" type="text" />
+          <button class="btn newsletter__btn">sign up</button>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer__wrapper container">
+        <div class="footer__list__container">
+          <h1 class="footer__list__title">About Us</h1>
+          <ul class="footer__list">
+            <li class="footer__list__item">Company</li>
+            <li class="footer__list__item">Contact</li>
+            <li class="footer__list__item">Careers</li>
+            <li class="footer__list__item">Affiliates</li>
+            <li class="footer__list__item">Stores</li>
+          </ul>
+        </div>
+        <div class="footer__list__container">
+          <h1 class="footer__list__title">Useful Links</h1>
+          <ul class="footer__list">
+            <li class="footer__list__item">Support</li>
+            <li class="footer__list__item">Refund</li>
+            <li class="footer__list__item">FAQ</li>
+            <li class="footer__list__item">Feedback</li>
+            <li class="footer__list__item">Stories</li>
+          </ul>
+        </div>
+        <div class="footer__list__container">
+          <h1 class="footer__list__title">Products</h1>
+          <ul class="footer__list">
+            <li class="footer__list__item">scarpa</li>
+            <li class="footer__list__item">garmont</li>
+            <li class="footer__list__item">dolomite</li>
+            <li class="footer__list__item">salewa</li>
+            <li class="footer__list__item">salomon</li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <div class="footer__list__container">
+            <h1 class="footer__list__title">Subscribe to our newsletter</h1>
+            <div class="fMail">
+              <input
+                type="text"
+                placeholder="your@email.com"
+                class="footer__input"
+              />
+              <button class="btn footer__btn">Join!</button>
+            </div>
+          </div>
+          <div class="footer__list__container">
+            <h1 class="footer__list__title">Follow Us</h1>
+            <div class="footer__icons">
+              <i class="footer__icon fa-brands fa-facebook"></i>
+              <i class="footer__icon fa-brands fa-twitter"></i>
+              <i class="footer__icon fa-brands fa-instagram"></i>
+              <i class="footer__icon fa-brands fa-pinterest"></i>
+            </div>
+          </div>
+          <div class="footer__list__container">
+            <span class="footer__copyright"
+              >@Mountain Shop. All rights reserved 2022</span
+            >
+          </div>
+        </div>
       </div>
     </section>
     <script src="products.js"></script>
